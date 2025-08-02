@@ -23,8 +23,8 @@ AI-powered document assistant that helps users understand documents, write email
 ### Setup
 
 1. Clone the repository:
-   git clone https://github.com/manyaigdtuw/Inklyn
-   cd Inklyn
+   - git clone https://github.com/manyaigdtuw/Inklyn
+   - cd Inklyn
 
 2. (Optional) Use the provided setup script to scaffold the environment and files:
     python setup_project.py
@@ -35,10 +35,10 @@ AI-powered document assistant that helps users understand documents, write email
 
 
 4. Create a `.env` file in the root directory with your OpenRouter API key and app settings:
-   OPENROUTER_API_KEY=your_openrouter_api_key_here
-   OPENROUTER_BASE_URL=https://openrouter.ai/api/v1
-   APP_NAME=AI Document Chatbot
-   DEFAULT_MODEL=anthropic/claude-3-haiku
+  -  OPENROUTER_API_KEY=your_openrouter_api_key_here
+  - OPENROUTER_BASE_URL=https://openrouter.ai/api/v1
+  - APP_NAME=AI Document Chatbot
+  - DEFAULT_MODEL=anthropic/claude-3-haiku
 
 5. Run the application:
    streamlit run app.py

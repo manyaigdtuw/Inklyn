@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 class Config:
-    # OpenRouter Configuration
+    
     OPENROUTER_API_KEY = os.environ.get('OPENROUTER_API_KEY')
     OPENROUTER_BASE_URL = os.environ.get('OPENROUTER_BASE_URL', 'https://openrouter.ai/api/v1')
     APP_NAME = os.environ.get('APP_NAME', 'AI Document Chatbot')
@@ -23,8 +23,8 @@ class Config:
     ]
     
     # UI settings
-    PAGE_TITLE = "AI Document Assistant"
-    PAGE_ICON = "🤖"
+    PAGE_TITLE = "inklyn<3"
+    PAGE_ICON = "❤️"
     
     # Available models (you can add more)
     AVAILABLE_MODELS = {
