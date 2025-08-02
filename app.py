@@ -162,17 +162,7 @@ def main():
         # Display current files
         display_current_files()
         
-        # Quick actions
-        st.subheader("⚡ Quick Actions")
-        if st.button("📝 Help me write an email"):
-            st.session_state.quick_action = "write_email"
-        if st.button("📧 Help me reply to an email"):
-            st.session_state.quick_action = "reply_email"
-        if st.button("📊 Analyze my documents"):
-            st.session_state.quick_action = "analyze_docs"
-        if st.button("🔄 Clear conversation"):
-            clear_conversation()
-    
+        
     # Main chat interface
     col1, col2 = st.columns([3, 1])
     
@@ -282,11 +272,7 @@ def display_chat_history():
 
 def handle_chat_input():
     """Handle user chat input - MUST be at main level"""
-    # Check for quick actions first
-    if 'quick_action' in st.session_state:
-        handle_quick_action(st.session_state.quick_action)
-        del st.session_state.quick_action
-        st.rerun()
+    
     
     # Chat input - THIS MUST BE AT MAIN LEVEL, NOT IN COLUMNS
     user_input = st.chat_input("Type your message here...")
@@ -316,26 +302,6 @@ def handle_chat_input():
         
         st.rerun()
 
-def handle_quick_action(action):
-    """Handle quick action buttons"""
-    if action == "write_email":
-        st.session_state.chat_history.append({
-            'role': 'user',
-            'content': "Help me write a professional email using the context from my uploaded files.",
-            'timestamp': datetime.now()
-        })
-    elif action == "reply_email":
-        st.session_state.chat_history.append({
-            'role': 'user',
-            'content': "Help me reply to an email. I'll provide the original email content.",
-            'timestamp': datetime.now()
-        })
-    elif action == "analyze_docs":
-        st.session_state.chat_history.append({
-            'role': 'user',
-            'content': "Please analyze all my uploaded documents and provide a comprehensive summary.",
-            'timestamp': datetime.now()
-        })
 
 def display_context_panel():
     """Display context and file information panel"""
