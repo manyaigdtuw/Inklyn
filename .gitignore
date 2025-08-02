@@ -1,0 +1,39 @@
+# === Python Cache Files ===
+__pycache__/
+*.py[cod]
+*.pyo
+
+# === Virtual Environments ===
+.venv/
+.venv311/
+
+# === Environment Files ===
+.env
+
+# === IDE / Editor Configs ===
+.vscode/
+.idea/
+
+# === OS Files ===
+.DS_Store
+Thumbs.db
+
+# === Log Files ===
+*.log
+
+# === Static Uploads (Temporary) ===
+static/uploads/*
+!static/uploads/.gitkeep
+
+# === Jupyter Notebook Checkpoints (if added later) ===
+.ipynb_checkpoints/
+
+# === Compiled Files / Binaries ===
+*.so
+*.dll
+*.dylib
+*.exe
+
+# === Misc ===
+*.bak
+*.swp
