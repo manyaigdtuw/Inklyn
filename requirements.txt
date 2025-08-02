@@ -16,3 +16,5 @@ streamlit-option-menu==0.3.6
 extra-streamlit-components==0.1.60
 requests==2.31.0
 httpx==0.25.2
+python-pptx==0.6.21
+
